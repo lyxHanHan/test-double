@@ -8,7 +8,7 @@ public class DoorPanelMock extends DoorPanel{
         this.wasCalled = true;
         System.out.println("Mock door panel class method is called");
     }
-    void verifyThatMockDoorPanelWasCalled(){
+    public void verifyThatMockDoorPanelWasCalled(){
         assertTrue(wasCalled);
     }
 
