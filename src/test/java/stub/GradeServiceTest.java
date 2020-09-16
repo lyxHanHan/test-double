@@ -12,8 +12,8 @@ public class GradeServiceTest {
     GradeSystemStub gradeSystemStub;
     @BeforeEach
     public void setUp(){
-        GradeSystemStub gradSystemSubs = new GradeSystemStub();
-        gradeService = new GradeService(gradSystemSubs);
+        GradeSystemStub gradeSystemSubs = new GradeSystemStub();
+        gradeService = new GradeService(gradeSystemSubs);
     }
     @Test
     public void shouldReturn90WhenCalculateStudentAverageGradeAndGradeIs80And90And100() {

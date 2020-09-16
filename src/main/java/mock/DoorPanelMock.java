@@ -4,7 +4,7 @@ public class DoorPanelMock extends DoorPanel{
     private boolean wasCalled = false;
     
     @Override
-    void close() {
+    public void close() {
         this.wasCalled = true;
         System.out.println("Mock door panel class method is called");
     }

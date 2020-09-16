@@ -1,21 +1,19 @@
 package mockito;
-import mock.DoorPanelMock;
+import mock.DoorPanel;
 import mock.SecurityCenter;
 
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 public class SecurityCenterMockitoTest {
     private SecurityCenter securityCenter;
 
     @Test
     public void shouldVerifyDoorIsClosed() {
-        DoorPanelMock doorpanel = mock(DoorPanelMock.class);
-        securityCenter = new SecurityCenter(doorpanel);
+        DoorPanel mockDoorpanel = Mockito.mock(DoorPanel.class);
+        securityCenter = new SecurityCenter(mockDoorpanel);
         securityCenter.switchOn();
-        doorpanel.verifyThatMockDoorPanelWasCalled();
-
+        Mockito.verify(mockDoorpanel).close();
     }
 }
